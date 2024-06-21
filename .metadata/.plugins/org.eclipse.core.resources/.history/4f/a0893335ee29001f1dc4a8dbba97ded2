@@ -1,0 +1,10 @@
+package Interfaces;
+
+public interface ICliente {
+	
+	public void RegistarCliente(TbCliente cliente);
+	public void ActualizarCliente(TbCliente cliente);
+	public void EliminarCliente(TbCliente cliente);
+	
+
+}

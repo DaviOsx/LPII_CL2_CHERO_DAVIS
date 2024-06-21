@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ProyectoMavenJpaPII&apos; to &apos;LPII_CL2_CHERO_DAVIS&apos;" description="Rename resource &apos;ProyectoMavenJpaPII&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/ProyectoMavenJpaPII" name="LPII_CL2_CHERO_DAVIS" stamp="1718939486394" updateReferences="true"/>
+</session>

@@ -1,0 +1,5 @@
+127.0.0.1 - - [20/Jun/2024:06:33:21 -0500] "GET / HTTP/1.1" 404 1002
+0:0:0:0:0:0:0:1 - - [20/Jun/2024:06:33:22 -0500] "GET /ProyectoMavenJpaPII/ListadoCliente.jsp HTTP/1.1" 200 367
+0:0:0:0:0:0:0:1 - - [20/Jun/2024:06:33:24 -0500] "GET /ProyectoMavenJpaPII/RegistrarCliente.jsp HTTP/1.1" 200 1111
+127.0.0.1 - - [20/Jun/2024:22:13:39 -0500] "GET / HTTP/1.1" 404 1002
+0:0:0:0:0:0:0:1 - - [20/Jun/2024:22:13:40 -0500] "GET /LPII_CL2_CHERO_DAVIS/RegistrarCliente.jsp HTTP/1.1" 200 1111
