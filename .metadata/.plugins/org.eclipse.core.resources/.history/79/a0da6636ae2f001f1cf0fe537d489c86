@@ -1,0 +1,14 @@
+package Test;
+
+import java.util.List;
+import Dao.TblUsuarioImp;
+import Modelo.TblUsuariocl2;
+
+public class TestUsuario {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

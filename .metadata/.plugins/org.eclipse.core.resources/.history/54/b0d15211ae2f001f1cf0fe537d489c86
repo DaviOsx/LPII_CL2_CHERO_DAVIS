@@ -1,0 +1,69 @@
+package Controlador;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import Dao.TblUsuarioImp;
+import Dao.tblProductoImp;
+import Modelo.TblProductocl2;
+import Modelo.TblUsuariocl2;
+
+/**
+ * Servlet implementation class ControladorUsuario
+ */
+public class ControladorUsuario extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ControladorUsuario() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		/// TODO Auto-generated method stub
+		//response.getWriter().append("Served at: ").append(request.getContextPath());		
+		//AGREGAR REQUEST -----> IMPORTANTE
+		TblUsuariocl2 usuario=new TblUsuariocl2();
+		TblUsuarioImp crud=new TblUsuarioImp();
+		
+		List<TblUsuariocl2> listadoproducto=crud.ListarUsuario();	
+		//ASISGNAMOS EL LISTADO
+		request.setAttribute("listadoproductos",listadoproducto);
+		//REDIRECCIONAMOS
+		request.getRequestDispatcher("/ListadoProducto.jsp").forward (request, response) ;		
+						
+		} // FIN DE DOGET
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// INICIO DE GOPOST
+				//doGet(request, response);
+				
+				//Recuperamos los datos del formulario
+				String usuario=request.getParameter("usuario");					
+				String password=request.getParameter("password");
+				
+				
+				//INSTALACION DE CLASES
+				
+				TblUsuariocl2 user=new TblUsuariocl2();
+				TblUsuarioImp crud=new TblUsuarioImp();
+				
+				user.setUsuariocl2(usuario);				
+				user.setPassword(password);
+				
+				crud.RegistrarUsuario(user);				
+				
+				request.getRequestDispatcher("/ListadoProducto.jsp").forward(request, response);
+			} // FIN DE DO POST
+
+}

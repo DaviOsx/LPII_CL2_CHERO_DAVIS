@@ -1,0 +1,118 @@
+<%@page import="java.util.*"%>
+<%@page import="Modelo.TblProductocl2"%>
+
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+        <%@taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c" %> 
+  <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+    
+    
+    
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Listado Producto</title>
+</head>
+<body bgcolor="#c5dec9">
+<h1  align="center" >Listado Producto</h1>
+<H2 align="center">
+
+<%-- HREF PARA QUE REDIMENCIONE A LA PAG DESEADA --%>
+<a href="RegistrarProducto.jsp" style="text-decoration:none"> 
+Listado Producto</a>
+
+</H2>
+
+<table align="center" border="2">
+
+<tr>
+<td>Codigo</td>
+<td>Nombre</td>
+<td>Precio</td>
+<td>PrecioVen</td>
+<td>Estado</td>
+<td>Descrip</td>
+</tr>
+
+<%
+
+List<TblProductocl2> listadoproducto=(List<TblProductocl2>)request.getAttribute("listadoprodcutos");
+
+if(listadoproducto!=null){
+
+	
+
+for(TblProductocl2 lis:listadoproducto){
+
+%>
+
+<tr>
+
+<td>
+
+<%=lis.getIdcliente()%>
+
+</td>
+
+<td>
+
+<%=lis.getNombre()%>
+
+</td>
+
+<td>
+
+<%=lis.getApellido() %>
+
+</td>
+
+<td>
+
+<%=lis.getDni() %>
+
+</td>
+
+<td>
+
+<%=lis.getEmail() %>
+
+</td>
+
+<td>
+
+<%=lis.getTelf() %>
+
+</td>
+
+<td>
+
+<%=lis.getSexo() %>
+
+</td>
+
+<td>
+
+<%=lis.getNacionalidad() %>
+
+</td>
+
+</tr>
+
+<%
+
+   }//cerramos la condicion...
+
+}  //cerramos el bucle
+
+%>
+
+</table>
+
+
+
+
+</body>
+</html>

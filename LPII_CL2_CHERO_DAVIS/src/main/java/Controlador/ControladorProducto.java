@@ -64,8 +64,8 @@ public class ControladorProducto extends HttpServlet {
 		tblProductoImp crud=new tblProductoImp();
 		
 		producto.setNombrecl2(nombre);	
-		//producto.setPreciocompcl2(precio);
-		//producto.setPrecioventacl2(precioven);
+		producto.setPreciocompcl2(precio);
+		producto.setPrecioventacl2(precioven);
 		producto.setEstadocl2(estado);
 		producto.setDescripcl2(descrip);
 		

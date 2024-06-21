@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="Dao.TblProducto"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="Dao.TblProductoImp"/>
+<fullyQualifiedTypeName name="Interfaces.IProducto"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="Modelo.TblProductocl2"/>
+<fullyQualifiedTypeName name="Dao.tblProductoImp"/>
 </qualifiedTypeNameHistroy>
