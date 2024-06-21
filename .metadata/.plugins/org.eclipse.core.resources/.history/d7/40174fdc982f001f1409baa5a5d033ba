@@ -1,0 +1,85 @@
+package Dao;
+
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import Interfaces.IProducto;
+import Modelo.TblProductocl2;
+
+
+
+
+public class tblProductoImp implements IProducto{
+
+	@Override
+	public void RegistrarProducto(TblProductocl2 producto) {
+		//ESTABLECER LA CONEXION  DE LA UNIDAD DE PERSISTENCE		
+				EntityManagerFactory em=Persistence.createEntityManagerFactory("LPII_CL2_CHERO_DAVIS");				
+				// GENERAR LA ENTIDADES
+				EntityManager emanager= em.createEntityManager();				
+				//INICIAMOS LA TRANSACCION
+					emanager.getTransaction().begin();					
+					//REGISTAR BASE DE DATOS
+					emanager.persist(producto);					
+					// EMITIR MENSAJE POR CONSOLA
+					System.out.println("Producto registrado en la BD");					
+					// CONFIRMAR LA TRANSACCION
+					emanager.getTransaction().commit();					
+					//CORRAMOS PROGRAMA
+					emanager.close();					
+			} // FIN DE METODO REGISTRAR
+	
+
+	@Override
+	public void ActualizarProducto(TblProductocl2 producto) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void EliminarProducto(TblProductocl2 producto) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public TblProductocl2 BuscarProducto(TblProductocl2 producto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<TblProductocl2> ListarProducto() {
+		
+		//ESTABLECER LA CONEXION  DE LA UNIDAD DE PERSISTENCE		
+		EntityManagerFactory fab=Persistence.createEntityManagerFactory("ProyectoMavenJpaPII");		
+		// GENERAR LA ENTIDADES
+		EntityManager em= fab.createEntityManager();		
+		//INICIAMOS LA TRANSACCION
+		em.getTransaction().begin();
+			
+			//REGISTAR BASE DE DATOS
+		List<TblProductocl2> listado=em.createQuery("select c from TblCliente c", TblProductocl2.class). getResultList();
+						
+							
+			// CONFIRMAR LA TRANSACCION
+			em.getTransaction().commit();
+			
+			//CORRAMOS PROGRAMA
+			em.close();	
+
+
+
+
+return listado;
+} // FIN DE METODO LISTAR
+	
+	
+	
+	
+	
+	
+
+} // FIN DE CLASE

@@ -1,0 +1,37 @@
+package Test;
+
+import java.util.List;
+import Dao.tblProductoImp;
+import Modelo.TblProductocl2;
+
+public class TestProducto {
+
+	public static void main(String[] args) {
+		
+		//realizamos las respectiva instancias..
+				TblProductocl2 producto=new TblProductocl2();
+				tblProductoImp crud=new tblProductoImp();
+				
+				
+		
+				List<TblProductocl2> listado=crud.ListarProducto();
+		
+		
+				//APLICAMOS BUCLE
+				for (TblProductocl2 lis:listado){
+					
+					//IMPRIMIMOS
+					System.out.print("codigo"+lis.getIdproductocl2() +
+							"nombre"+lis.getNombrecl2() + "estado" +lis.getEstadocl2()+ "dni"+lis.getDni());
+							
+					
+					
+				} //fin
+		
+		
+		
+
+
+	}
+
+}

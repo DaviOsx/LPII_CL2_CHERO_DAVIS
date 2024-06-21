@@ -1,0 +1,35 @@
+package Test;
+
+import Modelo.TblProductocl2;
+
+public class TestProducto {
+
+	public static void main(String[] args) {
+		
+		//realizamos las respectiva instancias..
+				TblProductocl2 producto=new TblProductocl2();
+				TblClienteImp crud=new TblClienteImp();
+				//insertamos datos
+				 cliente.setNombre("nalle32");
+				cliente.setApellido("chero");
+				cliente.setDni("466654222");
+				cliente.setEmail("mmego@gmail.com");
+				cliente.setTelf("999387459");
+				cliente.setSexo("f");
+				cliente.setNacionalidad("Peru");
+				//invocamos el metodo registrar...
+				crud.RegistrarCliente(cliente); 			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+	}
+
+}

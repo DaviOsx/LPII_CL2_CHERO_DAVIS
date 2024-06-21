@@ -29,7 +29,7 @@ public class ControladorCliente extends HttpServlet {
 		//response.getWriter().append("  Controlador Cliente  ").append(request.getContextPath());
 		
 		//AGREGAR REQUEST -----> IMPORTANTE
-		request.getRequestDispatcher("/ListadoCliente.jsp").forward(request, response);				
+		//request.getRequestDispatcher("/ListadoProducto.jsp").forward(request, response);				
 	} // FIN DE DOGET
 	
 
@@ -39,7 +39,7 @@ public class ControladorCliente extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		request.getRequestDispatcher("/ListadoCliente.jsp").forward(request, response);
+		//request.getRequestDispatcher("/ListadoProducto.jsp").forward(request, response);
 	} // FIN DE DO POST
 
 }

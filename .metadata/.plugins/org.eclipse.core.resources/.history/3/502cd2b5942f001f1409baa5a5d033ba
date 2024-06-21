@@ -1,0 +1,9 @@
+package Dao;
+
+import Interfaces.IProducto;
+
+public class TblProducto implements IProducto {
+	
+	@Override
+
+}

@@ -1,0 +1,17 @@
+package Interfaces;
+
+import Modelo.TblProductocl2;
+import java.util.List;
+
+public interface IProducto {
+	
+	
+	public void RegistrarProducto (TblProductocl2 producto);
+	public void ActualizarProducto (TblProductocl2 producto);
+	public void EliminarProducto (TblProductocl2 producto);
+	public  TblProductocl2 BuscarProducto (TblProductocl2 producto);
+	public List<TblProductocl2> ListarProducto();
+	
+	
+
+}//FIN DE INTERFACE

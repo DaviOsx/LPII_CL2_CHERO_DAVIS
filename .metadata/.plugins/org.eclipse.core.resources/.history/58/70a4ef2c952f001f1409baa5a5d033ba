@@ -1,0 +1,40 @@
+package Dao;
+
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+
+import Interfaces.IProducto;
+
+public class TblProducto implements IProducto {
+	
+	@Override
+	public void RegistrarCliente(TblProducto cliente) {
+		
+		//ESTABLECER LA CONEXION  DE LA UNIDAD DE PERSISTENCE		
+		EntityManagerFactory em=Persistence.createEntityManagerFactory("ProyectoMavenJpaPII");
+		
+		// GENERAR LA ENTIDADES
+		EntityManager emanager= em.createEntityManager();
+		
+		//INICIAMOS LA TRANSACCION
+			emanager.getTransaction().begin();
+			
+			//REGISTAR BASE DE DATOS
+			emanager.persist(cliente);
+			
+			// EMITIR MENSAJE POR CONSOLA
+			System.out.println("Cliente registrado en la BD");
+			
+			// CONFIRMAR LA TRANSACCION
+			emanager.getTransaction().commit();
+			
+			//CORRAMOS PROGRAMA
+			emanager.close();	
+		
+	} // FIN D
+}

@@ -15,7 +15,7 @@ INGRESAR AL SISTEMA
 <%-- CREAR FORMULARIO --%>
 <%-- ACTION HACE QUE REGRESE A MI CONTROLADOR CLIENTE --%>
 
-<form action="ControladorCliente" method="post">
+<form action="ControladorProducto" method="post">
 <table align="center" >
 
 <tr>

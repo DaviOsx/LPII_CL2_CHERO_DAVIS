@@ -1,0 +1,31 @@
+package Test;
+
+import Dao.tblProductoImp;
+import Modelo.TblProductocl2;
+
+public class TestProducto {
+
+	public static void main(String[] args) {
+		
+		//realizamos las respectiva instancias..
+				TblProductocl2 producto=new TblProductocl2();
+				tblProductoImp crud=new tblProductoImp();
+				
+				//insertamos datos
+				 producto.setNombrecl2("nalle32");
+				
+				//invocamos el metodo registrar...
+				crud.RegistrarProducto(producto);
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+	}
+
+}
